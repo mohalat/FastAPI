@@ -9,8 +9,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # COPY app/ .
 COPY . /app
 
-#COPY models /app/models
-COPY app/models /app/models
+COPY models /app/models
+#COPY app/models /app/models
 #COPY models/ /app/models/
 
 
