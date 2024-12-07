@@ -3,20 +3,35 @@ This project implements a Machine Learning (ML) API designed to predict whether 
  
 ### Table of Contents
 -Introduction
+
 -Features
+
 -Dataset Overview
+
 -Attribute Descriptions
+
 -Hypothesis
+
 -Sepsis Target
+
 -Business Questions
+
 -Technologies Used
+
 -Setup Instructions
+
 -Machine Learning Models
+
 -Installation Requirements
+
 -API Endpoints
+
 -Troubleshooting
+
 -Authorship
+
 -Donor Acknowledgement
+
 -License
  
  
@@ -36,14 +51,23 @@ The dataset used for this project contains medical records of patients admitted 
 
 ### Column Name Attribute/Target    Description
 -ID  N/A Unique number to represent patient ID
+
 -PRG Attribute 1 Plasma glucose
+
 -PL  Attribute 2 Blood Work Result-1 (mu U/ml)
+
 -PR  Attribute 3 Blood Pressure (mm Hg)
+
 -SK  Attribute 4 Blood Work Result-2 (mm)
+
 -TS  Attribute 5 Blood Work Result-3 (mu U/ml)
+
 -M11 Attribute 6 Body Mass Index (BMI): weight in kg/(height in m)^2
+
 -BD2 Attribute 7 Blood Work Result-4 (mu U/ml)
+
 -Age Attribute 8 Patient's age (years)
+
 -Insurance   N/A Indicates if a patient holds a valid insurance card
 
 
@@ -52,9 +76,13 @@ Patient in ICU will develop sepsis; Negative: Otherwise
  
 ### Technologies Used:
 -Python: For building the machine learning model and API.
+
 -FastAPI: To develop the RESTful API.
+
 -Scikit-learn: For machine learning model development.
+
 -Docker: For containerization and deployment.
+
 -NumPy and Pandas: For data processing and analysis.
  
 ### Setup
@@ -65,8 +93,11 @@ This is a Sepsis Prediction API built using FastAPI. The API allows users to upl
 Multiple Models: Choose between different pre-trained models for prediction:
  
 -"DecisionTree"
+
 -"RandomForest"
+
 -"LogisticRegression"
+
 -"KNN"
 
 CSV File Upload: Upload a CSV file with the necessary features for prediction.
@@ -75,33 +106,49 @@ Prediction Output: Get a JSON response containing the original data along with t
  
 ### Installation Requirements
 -Python 3.7 or higher
+
 -FastAPI
+
 -Uvicorn
+
 -Pandas
+
 -Scikit-learn
+
 -Matplotlib
+
 -Seaborn
+
 -scipy
  
 
 Step 1: Clone the repository -->
+
 git clone <repository-url>
+
 cd <repository-directory>
  
 Step 2: Install dependencies:
 Create a virtual environment and install the required dependencies using pip:
+
 python3 -m venv myenv
+
 source myenv/bin/activate  # On Windows, use `venv\Scripts\activate`
+
 pip install -r requirements.txt
 
-Step 3: Run the FastAPI server
+Step 3: Run the FastAPI server:
 To start the FastAPI application, run the following command:
+
 uvicorn mlapi:app --reload.
+
 This will start the FastAPI app locally at http://127.0.0.1:8000.
+
 Copy URL and paste it in a new browser and add /docs eg. http://127.0.0.1:8000/docs to  access the API.
  
 ### API Usage
 -Endpoint: /predict
+
 -Method: POST
 
 This endpoint allows you to make predictions using a specified model.
@@ -110,10 +157,14 @@ Type in the name of the model you want to use for prediction.
  ![alt text](<Screenshot 2024-12-07 at 02.16.51.png>)
 
 -Model – The name of the model you wish to use for prediction. 
+
 -Available models:
 "DecisionTree",
+
 "RandomForest",
+
 "LogisticRegression",
+
 "KNN".
  
 Upload File:
@@ -141,6 +192,14 @@ If the uploaded file is not a CSV file, the API will return a 400 error.
 ### Glance view of API application
  ![alt text](<Screenshot 2024-12-07 at 02.16.51.png>) ![alt text](<Screenshot 2024-12-07 at 02.17.02.png>) ![alt text](<Screenshot 2024-12-07 at 02.17.23.png>) ![alt text](<Screenshot 2024-12-07 at 02.17.30.png>)
  
+
+### Deployed links:
+-GitHub: https://github.com/mohalat/FastAPI
+
+-DockerHub: https://hub.docker.com/repository/docker/mohalat25/api_data/general
+
+-Swagger UI: http://127.0.0.1:8000/docs#/default/predictor_predict_post
+
 
 
 ### About the Author
